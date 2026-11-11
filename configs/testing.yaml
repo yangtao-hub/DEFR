@@ -1,0 +1,34 @@
+model: SingleEdgeImageUNet
+checkpoint: checkpoints_local/your_run_state_dict.pth
+input_grid_zyx:
+- 112
+- 160
+- 160
+output_grid_zyx:
+- 112
+- 160
+- 160
+image_dir: data_local/DATASET/images
+label_dir: data_local/DATASET/labels
+case_list: splits_local/deduplicated_test.txt
+normalization: clip_0_1
+score: L1_times_3D_SSIM_loss
+postprocessing: min3_mean9
+SSIM_window: 11
+SSIM_sigma: 1.5
+SSIM_C1: 0.0001
+SSIM_C2: 0.0009
+SSIM_data_range: 1
+SSIM_padding: zero_5
+threshold_protocol: development64_per_method_per_arm_fixed_raw_scale
+seed: 20261101
+filters:
+- 16
+- 32
+- 64
+- 128
+- 256
+fusion_type: distance
+fusion_temperature: 0.1
+mask_protocol: native_foreground
+dataset_role: testing
