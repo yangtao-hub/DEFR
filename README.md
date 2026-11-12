@@ -22,8 +22,6 @@ Set your local paths in `configs/`.
 python train.py --config configs/train_main.yaml --train
 ```
 
-The configuration uses normalized local noise, DGAF temperature 0.1, L1 + SSIM loss, Adam (learning rate 0.0001), batch size 2 and 100 epochs.
-
 ## Validation and evaluation
 
 Select the threshold on the 64 validation scans, then keep it fixed for testing:
