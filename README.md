@@ -6,8 +6,6 @@ DEFR combines structural and appearance features through discrepancy-guided adap
 
 ## Installation
 
-Python 3.8 and a CUDA-compatible GPU are required for training.
-
 ```bash
 python -m pip install -r requirements.txt
 ```
@@ -19,8 +17,6 @@ Provide preprocessed, aligned T2-weighted NIfTI volumes (`.nii.gz`) with zero ba
 Set your local paths in `configs/`.
 
 ## Training
-
-In `train_main.yaml`, `test_img_dir`, `test_lab_dir` and `monitor_case_list` refer to the validation set.
 
 ```bash
 python train.py --config configs/train_main.yaml --train
