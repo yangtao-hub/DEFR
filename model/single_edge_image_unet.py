@@ -2,7 +2,7 @@ import kornia as K
 import torch
 from torch import nn
 from loss import SSIM_Loss
-from .Edge_Enhancement_Rec import UNetEncoder, UNetDecoder_DF
+from .defr import UNetEncoder, UNetDecoder_DF
 
 class SingleEdgeImageUNet(nn.Module):
     single_reconstruction = True
