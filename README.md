@@ -30,3 +30,8 @@ Select the threshold on the 64 validation scans, then keep it fixed for testing:
 python evaluate.py --config configs/validation.yaml --calibrate --output outputs/validation
 python evaluate.py --config configs/testing.yaml --threshold-file outputs/validation/development_threshold.json --output outputs/testing --save-reconstructions
 ```
+
+## Additional resources
+
+- [Bootstrap analysis](bootstrap/)
+- [Preprocessing scripts](preprocessing/)
